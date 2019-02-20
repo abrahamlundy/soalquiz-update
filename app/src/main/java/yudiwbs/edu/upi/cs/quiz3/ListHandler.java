@@ -35,8 +35,8 @@ public class ListHandler extends RecyclerView.Adapter<ListHandler.CategoryViewHo
         }
         @Override
         public void onBindViewHolder(CategoryViewHolder holder, int position) {
-           //holder.tvNama.setText(getListPresident().get(position).getName());
-           //holder.tvAlamat.setText(getListPresident().get(position).getRemarks());
+           holder.tvNama.setText(getListMahasiswa().get(position).getNama());
+           holder.tvAlamat.setText(getListMahasiswa().get(position).getAlamat());
 
         }
         @Override

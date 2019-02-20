@@ -16,8 +16,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Toolbar myToolbar;
-    private ArrayList<Mahasiswa> list;
+
+    public ArrayList<Mahasiswa> list;
     RecyclerView daftar;
     String nama;
     String coba = "Aku";
@@ -26,11 +26,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar myToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
         tvNamaBeranda = findViewById(R.id.tvNama);
         tvNamaBeranda.setText(coba);
-        //showRecyclerList();
+        daftar= findViewById(R.id.rvAlamat);
+        daftar.setHasFixedSize(true);
+        list = new ArrayList<>();
+        list.addAll(MahasiswaData.getListData());
+        showRecyclerList();
 
     }
 
@@ -58,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.mIsiTabel:
 
-                Intent next = new Intent();
+                Intent next = new Intent(this, Isian.class);
                 startActivity(next);
                 Toast.makeText(getApplicationContext(), "Nama dan alamat terisi", Toast.LENGTH_LONG).show();
 
