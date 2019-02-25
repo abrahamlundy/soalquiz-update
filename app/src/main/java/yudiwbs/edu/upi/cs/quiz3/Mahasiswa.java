@@ -1,5 +1,6 @@
 package yudiwbs.edu.upi.cs.quiz3;
 
+//Sebagai pelempar data dalam bentuk single string
 public class Mahasiswa {
         private String nama, alamat;
 
@@ -15,6 +16,7 @@ public class Mahasiswa {
             return alamat;
         }
         public void setAlamat(String alamat) {
+
             this.alamat = alamat;
         }
 

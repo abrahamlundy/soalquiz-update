@@ -12,7 +12,7 @@ public class MahasiswaData {
         }
 
 
-
+//Sebagai data awal
         public static ArrayList<Mahasiswa> getListData(){
             Mahasiswa mahasiswa = null;
             ArrayList<Mahasiswa> list = new ArrayList<>();
