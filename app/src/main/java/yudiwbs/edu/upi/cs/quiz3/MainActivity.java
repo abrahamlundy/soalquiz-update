@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(myToolbar);
         tvNamaBeranda = findViewById(R.id.tvNama);
         tvNamaBeranda.setText(coba);
+
+        //Handling list dalam adapter
         daftar= findViewById(R.id.rvAlamat);
         daftar.setHasFixedSize(true);
         list = new ArrayList<>();
